@@ -1,5 +1,6 @@
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/mongo-express-rest-api')
+
+mongoose.connect('mongodb://127.0.0.1:27017/task_db')
 
 var TaskSchema = require('./schemas').TaskSchema
 
