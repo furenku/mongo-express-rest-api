@@ -22,6 +22,16 @@ var TaskSchema = mongoose.Schema({
 });
 
 
+
+var UserSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    }
+});
+
+
 module.exports = {
-    TaskSchema
+    TaskSchema,
+    UserSchema
 }

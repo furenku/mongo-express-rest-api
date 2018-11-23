@@ -8,10 +8,7 @@ function findAll (req, res, next) {
 }
 
 function findOne (req, res, next) {
-  TaskModel.findOne({_id: req.params.id}, function (err, task) {
-    
-    console.log(task);
-    
+  TaskModel.findOne({_id: req.params.id}, function (err, task) {    
     if (err) console.log(err)
     res.send(task)
   })
@@ -19,7 +16,6 @@ function findOne (req, res, next) {
 
 function create (req, res, next) {
   let newTask = new TaskModel(req.body)
-  console.log( req.body )
   newTask.save(function (err, task) {
     if (err) console.log(err)
     res.send(task)
